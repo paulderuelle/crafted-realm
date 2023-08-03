@@ -1,24 +1,18 @@
-# README
+# Welcome to My Portfolio
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This repository contains the files for my personal portfolio, where I showcase my web development projects, skills, and achievements.
 
-Things you may want to cover:
+## Upcoming Project
 
-* Ruby version
+As a RPG passionate, I am excited to leverage my newly acquired skills to push the boundaries of creativity by building a free, browser-accessible pixel art experience with the power of machine learning. Stay tuned, as this project is currently in development and will be available right here soon!
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+- Frontend: HTML, CSS, JavaScript, React
+- Backend: Ruby on Rails
+- Database: PostgreSQL
+- Tools: Babel, Webpack
 
-* Database creation
+## Contributions and Feedback
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+I welcome constructive feedback. If you have any ideas, suggestions, would like to contribute to one of my projects, discuss collaborations or explore professional opportunities, don't hesitate to contact me via <a href="mailto:p.deruelle.mail@gmail.com">email</a>. Your feedback is invaluable in improving my projects and advancing my development skills.
