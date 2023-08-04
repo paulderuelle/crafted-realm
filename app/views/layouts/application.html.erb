@@ -6,14 +6,15 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
+    <%# <link rel="stylesheet" href="/assets/application.scss" as="style" onload="this.onload=null;this.rel='stylesheet'"> %>
+    <script src="https://kit.fontawesome.com/000d9bfcce.js" crossorigin="anonymous"></script>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
+  <body data-controller="react">
     <main>
       <%= yield %>
     </main>
-    <%= render 'shared/waves' %>
   </body>
 </html>
