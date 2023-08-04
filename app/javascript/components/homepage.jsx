@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 import About from './about.jsx';
 import Portfolio from './portfolio.jsx';
+import Contact from './contact.jsx';
 
 function Homepage() {
-  const [showAbout, setShowAbout] = useState(false);
-  const [showPortfolio, setShowPortfolio] = useState(false);
+  const [activeSection, setActiveSection] = useState(null);
+
+  const handleShowSection = (section) => {
+    setActiveSection(section);
+  };
 
   return (
     <>
@@ -15,16 +19,17 @@ function Homepage() {
         </div>
         <div className="nav-buttons">
           <div className="left-nav">
-            <p onClick={() => setShowAbout(true)}>ABOUT</p>
-            <p onClick={() => setShowPortfolio(true)}>PORTFOLIO</p>
+            <p onClick={() => handleShowSection('about')}>ABOUT</p>
+            <p onClick={() => handleShowSection('portfolio')}>PORTFOLIO</p>
           </div>
-          <p>CONTACT</p>
+          <p onClick={() => handleShowSection('contact')}>CONTACT</p>
         </div>
       </div>
 
         <main>
-          {showAbout && <About />}
-          {showPortfolio && <Portfolio />}
+          {activeSection === 'about' && <About />}
+          {activeSection === 'portfolio' && <Portfolio />}
+          {activeSection === 'contact' && <Contact />}
         </main>
 
       <svg className="waves" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">
