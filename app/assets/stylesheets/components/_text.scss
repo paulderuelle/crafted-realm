@@ -1,0 +1,21 @@
+@import "variables";
+
+.maintitle {
+  color: $primary;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+  p {
+    margin: 1rem 0 0 2rem;
+  }
+  .hightlight {
+    color: $secondary;
+    em {
+      font-style: italic;
+    }
+  }
+}

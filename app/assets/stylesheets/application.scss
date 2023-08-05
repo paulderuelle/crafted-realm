@@ -24,12 +24,11 @@
   box-sizing: border-box;
 }
 body {
-  height: 100vh;
-  overflow: hidden;
+  min-height: 100vh;
   background: linear-gradient(145deg, rgba(255,247,230,1) 33%, rgba(255,223,158,1) 77%);
-}
-main {
-  padding: 2rem;
-  margin-bottom: $footer-height;
-  margin-top: $navbar-height;
+  overflow: auto;
+  main {
+    padding-top: $navbar-height + 2rem;
+    padding-bottom: $footer-height + 2rem;
+  }
 }
