@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Homepage from './homepage.jsx';
 import About from './about.jsx';
 import Portfolio from './portfolio.jsx';
@@ -6,10 +6,23 @@ import Contact from './contact.jsx';
 
 function Main() {
   const [activeSection, setActiveSection] = useState('homepage');
+  const h4Ref = useRef(null);
 
   const handleShowSection = (section) => {
     setActiveSection(section);
   };
+
+  useEffect(() => {
+    if (h4Ref.current) {
+      const beforeElement = h4Ref.current.querySelector('.before');
+      const afterElement = h4Ref.current.querySelector('.after');
+
+      if (beforeElement && afterElement) {
+        const afterRect = afterElement.getBoundingClientRect();
+        beforeElement.style.height = `${afterRect.top - 1}px`;
+      }
+    }
+  }, [activeSection]);
 
   return (
     <>

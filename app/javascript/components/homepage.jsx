@@ -7,10 +7,11 @@ function Homepage() {
   useEffect(() => {
     const options = {
       strings: [
-        `<p><span class="hightlight">/&gt;</span> Welcome to my “<span class="hightlight"><em>Crafted Realm</em></span>”!<br />
-        I'm <span class="hightlight">glad you're here</span> and hope you have a fullfiling day.</p>`
+        `<h1><span class='hightlight'>/</span> PAUL DERUELLE<br />FULL-STACK<span class='hightlight pipe'> WEB DEVELOPER</span></h1>
+        <h3><span class='hightlight'>/&gt;</span> Welcome to my “<span class='hightlight'><em>Crafted Realm</em></span>”!</h3>
+        <h4>I'm <span class='hightlight'>glad you're here</span> and hope you have a <span class='underline'>fullfiling day.</span></h4>`
       ],
-    typeSpeed: 25,
+    typeSpeed: 30,
     showCursor: false,
   };
 
@@ -22,8 +23,7 @@ function Homepage() {
 
   return (
     <>
-    <div class="maintitle">
-      <h1><span class="hightlight">/</span> PAUL DERUELLE<br />FULL-STACK<span class="hightlight pipe"> WEB DEVELOPER</span></h1>
+    <div class="content-wrapper">
       <span ref={typedRef} />
     </div>
     </>
