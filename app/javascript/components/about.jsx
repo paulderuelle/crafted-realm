@@ -1,24 +1,45 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function About() {
+  const [showFirstSection, setShowFirstSection] = useState(false);
+  const [showSecondSection, setShowSecondSection] = useState(false);
+  const [showThirdSection, setShowThirdSection] = useState(false);
+
+  useEffect(() => {
+    const timeouts = [
+      setTimeout(() => {
+        setShowFirstSection(true);
+      }, 0),
+      setTimeout(() => {
+        setShowSecondSection(true);
+      }, 500),
+      setTimeout(() => {
+        setShowThirdSection(true);
+      }, 1000)
+    ];
+
+    return () => {
+      timeouts.forEach(clearTimeout);
+    };
+  }, []);
 
   return (
     <>
     <div className='content-wrapper'>
-      <div className='subsection first'>
+    <div className={`subsection first ${showFirstSection ? 'anim' : ''}`}>
         <h2>A LONGSTAND PASSION</h2>
         <h3>I'm thrilled you're <span class='hightlight'>here te explore</span> my work.</h3>
-        <h4><span className='border-spanfix'>R</span>elatively new to the world of web development, my <span class='hightlight'>curiosity</span> led me to embark on a <span class='hightlight'>career transition</span> into this exciting field.</h4>
+        <h4>Relatively new to the world of web development, my <span class='hightlight'>curiosity</span> led me to embark on a <span class='hightlight'>career transition</span> into this exciting.<span className="square"></span></h4>
       </div>
-      <div className='subsection second'>
+      <div className={`subsection second ${showSecondSection ? 'anim' : ''}`}>
         <h2>WHAT ABOUT NOW</h2>
         <h3>Discovering development has been a <span class='hightlight'>wonderful</span> experience.</h3>
-        <h4><span className='border-spanfix'>I</span> can't wait to contribute to <span class='hightlight'>innovative projects</span>, so I am genuinely enthusiastic about open-source <span class='hightlight'>collaboration</span> or employment <span class='hightlight'>opportunities</span> to further my skills.</h4>
+        <h4>I can't wait to contribute to <span class='hightlight'>innovative projects</span>, so I am genuinely enthusiastic about open-source <span class='hightlight'>collaboration</span> or employment <span class='hightlight'>opportunities</span> to further my skills.<span className="square"></span></h4>
       </div>
-      <div className='subsection third'>
+      <div className={`subsection third ${showThirdSection ? 'anim' : ''}`}>
         <h2>WORK IN PROGRESS</h2>
         <h3>I can't wait to share <span class='hightlight'>my passion</span> for role-playing games.</h3>
-        <h4><span className='border-spanfix'>I</span>n my spare time, I <span class='hightlight'>unleash</span> my narrative prowess, binding it with my <span class='hightlight'>powers</span> of developer. Will result a thrilling fusion of <span class="hightlight">pixel art</span> and cutting-edge machine learning,<br /> birthing a <span class="hightlight">totally free and browser-accessible</span> experience tailored for rolists.</h4>
+        <h4>In my spare time, I <span class='hightlight'>unleash</span> my narrative prowess, binding it with my <span class='hightlight'>powers</span> of developer. Will result a thrilling fusion of <span class="hightlight">pixel art</span> and cutting-edge machine learning,<br /> birthing a <span class="hightlight">totally free and browser-accessible</span> experience tailored for rolists.<span className="square"></span></h4>
       </div>
     </div>
     </>

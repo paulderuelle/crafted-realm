@@ -17,6 +17,7 @@
     font-size: 3rem;
     margin-left: -1rem;
     line-height: 0;
+    position: relative;
   } h3 {
     font-weight: bold;
     line-height: 0.75;
@@ -26,22 +27,34 @@
     margin-left: 1rem;
     font-size: 1.25rem;
     position: relative;
-    &::before, &::after {
+    &::before, &::after, .square {
       content: '';
       position: absolute;
       display: block;
       background-color: $secondary;
-      } &::before {
-        width: 2px;
-        left: -0.5rem;
-        top: 10px;
-        bottom: -8px;
-      } &::after {
-        width: 50%;
-        height: 2px;
-        bottom: -0.5rem;
-        left: -0.5rem;
-      }
+    } &::before {
+      width: 2px;
+      left: -0.5rem;
+      top: 10px;
+      bottom: -8px;
+    } &::after {
+      width: 50%;
+      height: 2px;
+      bottom: -0.5rem;
+      left: -0.5rem;
+    } .square {
+      content: '';
+      position: absolute;
+      width: 0.5rem;
+      height: 0.5rem;
+      background-color: $secondary;
+      bottom: -1.25rem;
+      left: -1.25rem;
+    }
+  } h5 {
+    font-weight: normal;
+    margin-left: 1rem;
+    font-size: 1.25rem;
   }
 }
 .underline {
@@ -56,9 +69,6 @@
   background-color: $primary;
   }
 }
-.border-spanfix {
-
-}
 .hightlight {
   color: $secondary;
   em {
@@ -67,6 +77,10 @@
 }
 .subsection {
   margin: 3rem 2rem;
+  transform: translateX(-200%);
+} .anim {
+  transform: translateX(0%);
+  transition: transform 1s ease-in;
 } .first, .third {
   margin-left: 1rem;
 } .second {
