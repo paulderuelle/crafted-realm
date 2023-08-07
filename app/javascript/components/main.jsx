@@ -4,7 +4,7 @@ import About from './about.jsx';
 import Portfolio from './portfolio.jsx';
 import Contact from './contact.jsx';
 
-function Main() {
+export default function Main() {
   const [activeSection, setActiveSection] = useState('homepage');
   const h4Ref = useRef(null);
 
@@ -83,5 +83,3 @@ function Main() {
     </>
   );
 }
-
-export default Main;

@@ -1,12 +1,8 @@
 @import "variables";
 
-.content-wrapper {
+.content-wrapper, .projects-index, .content-description {
   color: $primary;
   font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-content: center;
   h1 {
     font-weight: bolder;
     margin: 3rem 0;
@@ -56,8 +52,12 @@
     margin-left: 1rem;
     font-size: 1.25rem;
   }
-}
-.underline {
+} .content-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+} .underline {
   position: relative;
   &::after {
   content: '';
@@ -68,19 +68,17 @@
   height: 2px;
   background-color: $primary;
   }
-}
-.hightlight {
+} .highlight {
   color: $secondary;
   em {
     font-style: italic;
   }
-}
-.subsection {
+} .subsection {
   margin: 3rem 2rem;
-  transform: translateX(-200%);
+  transform: translateX(-125%);
 } .anim {
   transform: translateX(0%);
-  transition: transform 1s ease-in;
+  transition: transform 0.5s ease-in;
 } .first, .third {
   margin-left: 1rem;
 } .second {

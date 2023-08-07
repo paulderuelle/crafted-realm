@@ -1,15 +1,15 @@
 import React, { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
-function Homepage() {
+export default function Homepage() {
   const typedRef = useRef(null);
 
   useEffect(() => {
     const options = {
       strings: [
-        `<h1><span class='hightlight'>/</span> PAUL DERUELLE<br />FULL-STACK<span class='hightlight pipe'> WEB DEVELOPER</span></h1>
-        <h3><span class='hightlight'>/&gt;</span> Welcome to my “<span class='hightlight'><em>Crafted Realm</em></span>”!</h3>
-        <h5>I'm <span class='hightlight'>glad you're here</span> and hope you have a <span class='underline'>fullfiling day.</span></h5>`
+        `<h1><span class='highlight'>/</span> PAUL DERUELLE<br />FULL-STACK<span class='highlight pipe'> WEB DEVELOPER</span></h1>
+        <h3><span class='highlight'>/&gt;</span> Welcome to my “<span class='highlight'><em>Crafted Realm</em></span>”!</h3>
+        <h5>I'm <span class='highlight'>glad you're here</span> and hope you have a full<span class='underline'>filing day.</span></h5>`
       ],
     typeSpeed: 30,
     showCursor: false,
@@ -29,5 +29,3 @@ function Homepage() {
     </>
   );
 }
-
-export default Homepage;
