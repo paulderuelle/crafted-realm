@@ -57,6 +57,7 @@
   flex-wrap: wrap;
   flex-direction: column;
   align-content: center;
+  text-align: justify;
 } .underline {
   position: relative;
   &::after {
@@ -74,22 +75,11 @@
     font-style: italic;
   }
 } .subsection {
-  margin: 3rem 2rem;
+  margin: 3rem 4rem;
   transform: translateX(-125%);
 } .anim {
   transform: translateX(0%);
   transition: transform 0.5s ease-in;
-} .first, .third {
-  margin-left: 1rem;
 } .second {
-  margin-left: 4rem;
-}
-
-h4 span.hightlight + br {
-  display: none;
-}
-@media screen and (min-width: 1476px) {
-  h4 span.hightlight + br {
-    display: inline;
-  }
+  margin-left: 8rem;
 }

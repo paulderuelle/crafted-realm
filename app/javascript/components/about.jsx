@@ -39,7 +39,7 @@ export default function About() {
       <div className={`subsection third ${showThirdSection ? 'anim' : ''}`}>
         <h2>WORK IN PROGRESS</h2>
         <h3>I can't wait to share <span class='highlight'>my passion</span> for role-playing games.</h3>
-        <h4>In my spare time, I <span class='highlight'>unleash</span> my narrative prowess, binding it with my <span class='highlight'>powers</span> of developer. Will result a thrilling fusion of <span class="hightlight">pixel art</span> and cutting-edge machine learning,<br /> birthing a <span class="hightlight">totally free and browser-accessible</span> experience tailored for rolists.<span className="square"></span></h4>
+        <h4>In my spare time, I <span class='highlight'>unleash</span> my narrative prowess, binding it with my <span class='highlight'>powers</span> of developer. Will result a thrilling fusion of <span class="hightlight">pixel art</span> and cutting-edge machine learning, birthing a <span class="hightlight">totally free and browser-accessible</span> experience tailored for rolists.<span className="square"></span></h4>
       </div>
     </div>
     </>
