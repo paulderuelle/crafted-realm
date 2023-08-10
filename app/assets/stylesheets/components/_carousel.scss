@@ -28,7 +28,9 @@
 } .carousel-container {
   display: flex;
   justify-content: center;
-  margin: 3rem;
+  margin: 2rem;
+  padding: 3rem;
+  position: relative;
 } .carousel-track {
   display: flex;
   flex-direction: column;
@@ -40,5 +42,5 @@
 } .carousel-img {
   width: 100%;
   object-fit: cover;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  box-shadow: $box-shadow;
 }

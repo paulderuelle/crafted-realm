@@ -1,0 +1,77 @@
+@import "variables";
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 77%;
+  margin: 0 auto;
+  padding: 3rem;
+  position: relative;
+} input, textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem auto;
+  border: 1px solid $primary;
+  border-radius: 5px;
+  font-family: 'Lato', sans-serif;
+  font-size: 12px;
+  min-width: 400px;
+  box-shadow: $box-shadow;
+  &:hover {
+    outline: 3px solid rgba(245, 136, 64, 0.33);
+  } &:focus {
+    outline: 3px solid rgba(245, 136, 64, 0.77);
+  } &::placeholder {
+    color: $primary;
+  }
+} textarea {
+  min-height: 250px;
+  margin-bottom: 1.75rem;
+}
+
+
+button {
+  background-color: white;
+  border: 1px solid $primary;
+  box-shadow: $box-shadow;
+  font-family: 'Lato', sans-serif;
+  color: $primary;
+  cursor: pointer;
+  padding: 1rem;
+  text-decoration: none;
+  transition: all 100ms ease-in-out;
+  border-bottom-left-radius: 40px 150px;
+  border-bottom-right-radius: 150px 40px;
+  border-top-left-radius: 150px 40px;
+  border-top-right-radius: 40px 150px;
+  &:hover {
+    transform: translate3d(0, 2px, 0);
+  }
+}
+
+.borders {
+  content: '';
+  position: absolute;
+  display: block;
+  background-color: $primary;
+} .top {
+  height: 2px;
+  width: calc(30%);
+  right: 0;
+  top: 0;
+} .right {
+  height: calc(100%);
+  width: 2px;
+  right: 0;
+  bottom: 0;
+} .bottom {
+  height: 2px;
+  width: calc(100%);
+  bottom: 0;
+} .left {
+  height: calc(30%);
+  width: 2px;
+  left: 0;
+  bottom: 0;
+}

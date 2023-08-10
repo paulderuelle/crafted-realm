@@ -69,6 +69,10 @@ const Portfolio = () => {
         </div>
     </div>
     <div className="carousel-container">
+      <span className='borders top'></span>
+      <span className='borders right'></span>
+      <span className='borders bottom'></span>
+      <span className='borders left'></span>
         <div className="carousel-track">
           {slides.map((slide, index) => (
           <div className={`carousel-slide ${index === activeSlide ? 'active' : ''}`} key={index}>

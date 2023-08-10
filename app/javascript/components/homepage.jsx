@@ -8,8 +8,8 @@ export default function Homepage() {
     const options = {
       strings: [
         `<h1><span class='highlight'>/</span> PAUL DERUELLE<br />FULL-STACK<span class='highlight pipe'> WEB DEVELOPER</span></h1>
-        <h3><span class='highlight'>/&gt;</span> Welcome to my “<span class='highlight'><em>Crafted Realm</em></span>”!</h3>
-        <h5>I'm <span class='highlight'>glad you're here</span> and hope you have a full<span class='underline'>filing day.</span></h5>`
+        <h3><span class='highlight'>/&gt;</span> Welcome to my “<span class='highlight'><em>Crafted Realm</em></span>”! <br>
+        I'm <span class='highlight'>glad you're here</span> and hope you have a fullfiling day.</h3>`
       ],
     typeSpeed: 30,
     showCursor: false,
