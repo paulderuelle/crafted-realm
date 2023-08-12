@@ -29,7 +29,7 @@ export default function About() {
     <div className={`subsection first ${showFirstSection ? 'anim' : ''}`}>
         <h2>A LONGSTAND PASSION</h2>
         <h3>I'm thrilled you're <span class='highlight'>here te explore</span> my work.</h3>
-        <h4>Relatively new to the world of web development, my <span class='highlight'>curiosity</span> led me to embark on a <span class='highlight'>career transition</span> into this exciting.<span className="square"></span></h4>
+        <h4>Relatively new to the world of web development, my <span class='highlight'>curiosity</span> led me to embark on a <span class='highlight'>career transition</span> into this field.<span className="square"></span></h4>
       </div>
       <div className={`subsection second ${showSecondSection ? 'anim' : ''}`}>
         <h2>WHAT ABOUT NOW</h2>
