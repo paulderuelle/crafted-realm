@@ -10,9 +10,9 @@ const Portfolio = () => {
   ];
 
 const images = [
-  <img src="/assets/GemSentinel.png" className='carousel-img'/>,
-  <img src="/assets/RollFinder.png" className='carousel-img'/>,
-  <img src="/assets/PostsChallenge.png" className='carousel-img'/>
+  <img src="GemSentinel.png" className='carousel-img'/>,
+  <img src="RollFinder.png" className='carousel-img'/>,
+  <img src="PostsChallenge.png" className='carousel-img'/>
 ];
 
 
