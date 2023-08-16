@@ -33,8 +33,11 @@ const Contact = () => {
         }),
       });
 
-      const data = await response.json();
-      console.log('Email sent succesfully', data);
+      if (response.ok) {
+        console.log('Email sent successfully');
+      } else {
+        console.log('Error sending email:', response.statusText);
+      }
     } catch (error) {
       console.log('Error sending email:', error);
     }

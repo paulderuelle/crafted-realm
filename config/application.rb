@@ -13,8 +13,8 @@ module Craftedrealm
 
     config.middleware.insert_before 0, Rack::Cors do
       allow do
-        origins 'https://www.craftedrealm.online' # Mettez ici l'URL de votre frontend
-        resource '*', headers: :any, methods: [:get, :post, :options]
+        origins '*'
+        resource '*', headers: :any, methods: [:get, :post, :patch, :put]
       end
     end
     # Configuration for the application, engines, and railties goes here.
