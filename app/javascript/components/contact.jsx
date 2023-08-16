@@ -17,57 +17,28 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch('/api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fullname,
-          email,
-          message,
-        }),
-      });
-
-      const data = await response.json();
-      console.log('Email sent successfully:', data);
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
   };
 
   return (
     <>
       <form onSubmit={handleSubmit}>
+      <span className='borders top'></span>
+      <span className='borders right'></span>
+      <span className='borders bottom'></span>
+      <span className='borders left'></span>
         <div>
-          <input
-            type="text"
-            id="name"
-            value={fullname}
-            onChange={handleFullNameChange}
-            placeholder='Full Name'
-          />
+          <input type="text" id="name" value={fullname} onChange={handleFullNameChange}
+          placeholder='Full Name'/>
         </div>
         <div>
-          <input
-            type="text"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder='Email'
-          />
+          <input type="text" id="email" value={email} onChange={handleEmailChange}
+          placeholder='Email'/>
         </div>
         <div>
-          <textarea
-            id="message"
-            value={message}
-            onChange={handleMessageChange}
-            placeholder='Your message'
-          />
+          <textarea id="message" value={message} onChange={handleMessageChange}
+          placeholder='Your message'/>
         </div>
         <button type="submit">SEND EMAIL</button>
       </form>
