@@ -63,6 +63,15 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "craftedrealm_production"
 
   config.action_mailer.perform_caching = false
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    address: 'smtp.sendgrid.net',     # Adresse du serveur SMTP SendGrid
+    port: 587,                        # Port du serveur SMTP
+    domain: 'craftedrealm.online',             # Votre domaine
+    authentication: :plain,
+    user_name: ENV['SENDGRID_USERNAME'],     # Utiliser les variables d'environnement
+    password: ENV['SENDGRID_PASSWORD']       # Utiliser les variables d'environnement
+  }
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.

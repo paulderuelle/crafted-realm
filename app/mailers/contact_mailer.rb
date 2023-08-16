@@ -1,4 +1,5 @@
 class ContactMailer < ApplicationMailer
+  include SendGrid
   def send_email(fullname, email, message)
     @fullname = fullname
     @email = email
