@@ -4,6 +4,11 @@ class Api::ContactController < ApplicationController
     email = params[:email]
     message = params[:message]
 
+    if fullname.blank? || email.blank? || message.blank?
+      render json: { error: 'Missing required data' }, status: :unprocessable_entity
+      return
+    end
+
     Rails.logger.info("Fullname: #{fullname}")
     Rails.logger.info("Email: #{email}")
     Rails.logger.info("Message: #{message}")
