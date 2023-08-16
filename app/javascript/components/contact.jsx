@@ -20,13 +20,20 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('/api/send-email', {
-        fullname,
-        email,
-        message
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullname,
+          email,
+          message,
+        }),
       });
 
-      console.log('Email sent successfully:', response.data);
+      const data = await response.json();
+      console.log('Email sent successfully:', data);
     } catch (error) {
       console.error('Error sending email:', error);
     }
