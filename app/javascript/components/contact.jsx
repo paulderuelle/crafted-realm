@@ -17,8 +17,28 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    await handleSubmit(e);
+
+    try {
+      const response = await fetch('api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          fullname,
+          email,
+          message,
+        }),
+      });
+
+      const data = await response.json();
+      console.log('Email sent succesfully', data);
+    } catch (error) {
+      console.log('Error sending email:', error);
+    }
   };
 
   return (
