@@ -28,7 +28,7 @@ export default function Main() {
     <>
       <div className="navbar">
         <div className="logo" onClick={() => handleShowSection('homepage')}>
-          <img src="/assets/logo.png"/>
+          <img src="/assets/images/logo.png"/>
           <p>Crafted Realm</p>
         </div>
         <div className="nav-buttons">
