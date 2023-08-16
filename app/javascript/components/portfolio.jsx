@@ -9,11 +9,12 @@ const Portfolio = () => {
     'PostsChallenge',
   ];
 
-  const images = [
-  <img src="/assets/images/GemSentinel.png" className='carousel-img'/>,
-  <img src="/assets/images/RollFinder.png" className='carousel-img'/>,
-  <img src="/assets/images/PostsChallenge.png" className='carousel-img'/>
+const images = [
+  <img src="<%= image_tag('GemSentinel.png') %>" className='carousel-img'/>,
+  <img src="<%= image_tag('RollFinder.png') %>" className='carousel-img'/>,
+  <img src="<%= image_tag('PostsChallenge.png') %>" className='carousel-img'/>
 ];
+
 
   const descriptions = [
     <div className="content-description">
