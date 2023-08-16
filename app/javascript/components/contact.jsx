@@ -39,26 +39,35 @@ const Contact = () => {
       console.error('Error sending email:', error);
     }
   };
-};
 
   return (
     <>
       <form onSubmit={handleSubmit}>
-      <span className='borders top'></span>
-      <span className='borders right'></span>
-      <span className='borders bottom'></span>
-      <span className='borders left'></span>
         <div>
-          <input type="text" id="name" value={fullname} onChange={handleFullNameChange}
-          placeholder='Full Name'/>
+          <input
+            type="text"
+            id="name"
+            value={fullname}
+            onChange={handleFullNameChange}
+            placeholder='Full Name'
+          />
         </div>
         <div>
-          <input type="text" id="email" value={email} onChange={handleEmailChange}
-          placeholder='Email'/>
+          <input
+            type="text"
+            id="email"
+            value={email}
+            onChange={handleEmailChange}
+            placeholder='Email'
+          />
         </div>
         <div>
-          <textarea id="message" value={message} onChange={handleMessageChange}
-          placeholder='Your message'/>
+          <textarea
+            id="message"
+            value={message}
+            onChange={handleMessageChange}
+            placeholder='Your message'
+          />
         </div>
         <button type="submit">SEND EMAIL</button>
       </form>
