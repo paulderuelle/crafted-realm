@@ -19,7 +19,19 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    try {
+      const response = await axios.post('/api/send-email', {
+        fullname,
+        email,
+        message
+      });
+
+      console.log('Email sent successfully:', response.data);
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   };
+};
 
   return (
     <>
