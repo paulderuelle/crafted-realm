@@ -17,8 +17,9 @@ const Contact = () => {
     setMessage(e.target.value);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     try {
       const response = await fetch('/api/send-email', {
         method: 'POST',
