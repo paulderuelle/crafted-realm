@@ -28,7 +28,7 @@ export default function Main() {
     <>
       <div className="navbar">
         <div className="logo" onClick={() => handleShowSection('homepage')}>
-          <img src="<%= image_tag('logo.png') %>"/>
+        <img src="logo.png" className='carousel-img'/>,
           <p>Crafted Realm</p>
         </div>
         <div className="nav-buttons">
