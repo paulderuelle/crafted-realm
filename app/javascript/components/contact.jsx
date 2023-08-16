@@ -19,7 +19,6 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await handleSubmit(e);
 
     try {
       const response = await fetch('api/send-email', {
