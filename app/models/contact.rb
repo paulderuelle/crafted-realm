@@ -17,7 +17,4 @@ class Contact
     end
   end
 
-  # def send_email
-  #   ContactMailer.send_email(fullname, email, message).deliver_now
-  # end
 end

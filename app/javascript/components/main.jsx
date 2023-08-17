@@ -10,6 +10,9 @@ export default function Main() {
 
   const handleShowSection = (section) => {
     setActiveSection(section);
+    // if (section === 'contact') {
+    //   window.location.href = '/contact/new';
+    // }
   };
 
   useEffect(() => {
@@ -28,7 +31,7 @@ export default function Main() {
     <>
       <div className="navbar">
         <div className="logo" onClick={() => handleShowSection('homepage')}>
-        <img src="logo.png"/>,
+        <img src="logo.png"/>
           <p>Crafted Realm</p>
         </div>
         <div className="nav-buttons">
@@ -38,8 +41,9 @@ export default function Main() {
             <p className={activeSection === 'portfolio' ? 'active' : ''}
             onClick={() => handleShowSection('portfolio')}>PORTFOLIO</p>
           </div>
-          <p className={activeSection === 'contact' ? 'active' : ''}
-          onClick={() => handleShowSection('contact')}>CONTACT</p>
+          {/* <p className={activeSection === 'contact' ? 'active' : ''}>
+            <a href="/contact/new">CONTACT</a>
+          onClick={() => handleShowSection('contact')}>CONTACT</p> */}
         </div>
       </div>
 
@@ -47,7 +51,7 @@ export default function Main() {
           {activeSection === 'homepage' && <Homepage />}
           {activeSection === 'about' && <About />}
           {activeSection === 'portfolio' && <Portfolio />}
-          {activeSection === 'contact' && <Contact />}
+          {/* {activeSection === 'contact' && <Contact id='contact' />} */}
         </main>
 
         <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shapeRendering="auto">

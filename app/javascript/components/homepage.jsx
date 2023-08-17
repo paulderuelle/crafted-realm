@@ -11,7 +11,7 @@ export default function Homepage() {
         <h3><span class='highlight'>/&gt;</span> Welcome to my “<span class='highlight'><em>Crafted Realm</em></span>”! <br>
         I'm <span class='highlight'>glad you're here</span> and hope you have a fullfiling day.</h3>`
       ],
-    typeSpeed: 30,
+    typeSpeed: 20,
     showCursor: false,
   };
 

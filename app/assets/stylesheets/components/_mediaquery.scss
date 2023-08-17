@@ -1,0 +1,107 @@
+@media (max-width: 768px) {
+  body {
+    main {padding: 5rem 0 !important;}
+  }
+  .navbar {
+    height: 3rem;
+    .nav-buttons { margin: 0.5rem 2rem;}
+  }
+  .content-wrapper {
+    h1, h2 {font-size: 2.5rem;}
+    h3 {font-size: 1.5rem;}
+    h4 {font-size: 1.2rem;}
+  }
+  .subsection {margin: 2rem;}
+  .second {margin-left: 6rem !important;}
+  .content-description {
+    h2 {font-size: 2.75rem;}
+    h3 {font-size: 1.4rem;}
+    h4 {font-size: 1.15rem;}
+  }
+  .slide-description {margin: 1rem;}
+  .top-projects-container {margin: 1rem 0;}
+  .projects-index {
+    margin: 0 1rem;
+    h3 {font-size: 1.35rem;}
+  }
+  .carousel-container {
+    margin: 1rem;
+    padding: 2rem;
+  }
+  .footer-content {
+    p {
+      font-size: 0.9rem;
+      a {font-size: 1rem;}
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    main {padding: 2rem 0 !important;}
+  }
+  .navbar {
+    height: 2.85rem;
+    .logo {
+      margin-left: 0.5rem;
+      img {height: 65%;}
+      p {
+        font-size: 0.8rem;
+        margin-top: -0.6rem;
+      }
+    }
+    .nav-buttons {
+      margin: 1rem;
+      .left-nav {
+        p {
+          margin-right: 1rem;
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .content-wrapper {
+    h1, h2 {font-size: 1.2rem;}
+    h3 {font-size: 0.75rem;}
+    h4 {
+      font-size: 0.65rem;
+      &::after {height: 1px;}
+      &::before {width: 1px;}
+      .square {
+        width: 0.25rem;
+        height: 0.25rem;
+        bottom: -1rem;
+        left: -1rem;
+      }
+    }
+  }
+  .top, .bottom {height: 1px;}
+  .right, .left {width: 1px;}
+  .subsection {margin: 1.25rem;}
+  .first {margin-top: 3rem !important;}
+  .second {margin-left: 3rem !important;}
+  .content-description {
+    h2 {
+      font-size: 1.5rem;
+      margin-left: -10px;
+    }
+    h3 {font-size: 0.9rem;}
+    h4 {font-size: 0.75rem;}
+  }
+  .slide-description {margin: 1rem;}
+  .top-projects-container {flex-direction: column;}
+  .projects-index {
+    margin: 0 2rem;
+    h3 {font-size: 1.2rem;}
+  }
+  .carousel-container {
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .footer-content {
+    p {
+      font-size: 0.8rem;
+      a {font-size: 0.9rem;}
+    }
+  }
+}
