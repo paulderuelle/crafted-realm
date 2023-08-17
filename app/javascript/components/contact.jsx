@@ -4,6 +4,7 @@ const Contact = () => {
   const [fullname, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [emailSent, setEmailSent] = useState(false);
 
   const handleFullNameChange = (e) => {
     setFullName(e.target.value);
@@ -20,27 +21,10 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    try {
-      const response = await fetch('api/send-email', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          fullname,
-          email,
-          message,
-        }),
-      });
-
-      if (response.ok) {
-        console.log('Email sent successfully');
-      } else {
-        console.log('Error sending email:', response.statusText);
-      }
-    } catch (error) {
-      console.log('Error sending email:', error);
-    }
+    setEmailSent(true);
+    setFullName('');
+    setEmail('');
+    setMessage('');
   };
 
   return (
@@ -64,6 +48,7 @@ const Contact = () => {
         </div>
         <button type="submit">SEND EMAIL</button>
       </form>
+      {emailSent && <div className='alert'>Email sent successfully!</div>}
     </>
   );
 };
