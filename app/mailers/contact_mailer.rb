@@ -1,9 +1,12 @@
 class ContactMailer < ApplicationMailer
-  include SendGrid
-  def send_email(fullname, email, message)
-    @fullname = fullname
-    @email = email
-    @message = message
-    mail(to: 'p.deruelle.mail@gmail.com', subject: '[CraftedRealm]')
+
+  def contact_form(contact)
+    @contact = contact
+    @to = "p.deruelle.mail@gmail.com"
+
+    mail(to: @to, subject "[CR_Contact]") do |format|
+      format.html
+    end
   end
+
 end
